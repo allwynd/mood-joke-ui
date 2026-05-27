@@ -1,0 +1,9 @@
+{
+  "name": "mood-joke-ui",
+  "version": "1.0.0",
+  "description": "Frontend for the mood joke app",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8080"
+  }
+}
