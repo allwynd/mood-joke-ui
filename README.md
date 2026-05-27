@@ -1,10 +1,14 @@
-# Mood Joke
+# Mood Joke UI
 
 Simple Frontend HTML & Javascript App
 
 Quick start
 
+Run locally
+```
+npx serve -l <YOUR_PORT>
+```
 
 Files
-- [public/index.html](public/index.html) — frontend
+- [index.html](index.html) — frontend
 
