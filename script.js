@@ -8,6 +8,7 @@ const ratingSection = document.getElementById("ratingSection");
 const pills         = document.querySelectorAll(".pill");
 
 const API_BASE = window.ENV?.API_BASE ?? "https://mood-jokes-agent-api-h3bdera7eehee8dz.austriaeast-01.azurewebsites.net";
+//"https://mood-jokes-agent-api-h3bdera7eehee8dz.austriaeast-01.azurewebsites.net";
 
 let currentJoke = "";
 let currentMood = "happy";
@@ -31,6 +32,11 @@ customMood.addEventListener("input", () => {
   } else if (selectedPill) {
     selectedPill.classList.add("active");
   }
+});
+
+/* submit on Enter inside the custom mood input */
+customMood.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") fetchJoke();
 });
 
 /* ── Fetch joke ─────────────────────── */
@@ -93,6 +99,13 @@ document.getElementById("stopBtn").addEventListener("click", () => {
   jokeText.textContent = "Thanks for using Mood Jokes! Come back when you need a laugh 😄";
   ratingSection.classList.remove("active");
   message.textContent = "";
+});
+
+/* submit on Enter when focus is NOT in the custom mood input */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && document.activeElement !== customMood) {
+    fetchJoke();
+  }
 });
 
 /* ── Rating ─────────────────────────── */
