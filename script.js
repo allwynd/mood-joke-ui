@@ -7,7 +7,7 @@ const message       = document.getElementById("message");
 const ratingSection = document.getElementById("ratingSection");
 const pills         = document.querySelectorAll(".pill");
 
-const API_BASE = window.ENV?.API_BASE ?? "http://localhost:3000";
+const API_BASE = window.ENV?.API_BASE ?? "https://mood-jokes-agent-api-h3bdera7eehee8dz.austriaeast-01.azurewebsites.net";
 
 let currentJoke = "";
 let currentMood = "happy";
