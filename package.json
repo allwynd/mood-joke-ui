@@ -4,6 +4,7 @@
   "description": "Frontend for the mood joke app",
   "main": "index.html",
   "scripts": {
-    "start": "live-server --port=8080"
+    "start": "live-server --port=8080",
+    "build": "echo \"No build needed\""
   }
 }

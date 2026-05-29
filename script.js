@@ -7,7 +7,9 @@ const message       = document.getElementById("message");
 const ratingSection = document.getElementById("ratingSection");
 const pills         = document.querySelectorAll(".pill");
 
-const API_BASE = window.ENV?.API_BASE || "http://localhost:3000";  
+const API_BASE =
+  (window.ENV && window.ENV.API_BASE) ||
+  "http://localhost:3000";
 
 let currentJoke = "";
 let currentMood = "happy";
