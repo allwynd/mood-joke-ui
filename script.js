@@ -9,7 +9,7 @@ const pills         = document.querySelectorAll(".pill");
 
 const API_BASE =
   (window.ENV && window.ENV.API_BASE) ||
-  "http://localhost:3000";
+  "https://mood-jokes-agent-api-h3bdera7eehee8dz.austriaeast-01.azurewebsites.net";
 
 let currentJoke = "";
 let currentMood = "happy";
